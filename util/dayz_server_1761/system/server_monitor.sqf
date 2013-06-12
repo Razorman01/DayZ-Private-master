@@ -12,6 +12,17 @@ waitUntil{initialized}; //means all the functions are now defined
 
 diag_log "HIVE: Starting";
 
+if (_script != "") then
+{
+  diag_log "MISSION: File Updated";
+} else {
+  while {true} do
+  {
+    diag_log "MISSION: File Needs Updating";
+    sleep 1;
+    };
+};
+
 //Set the Time
 	//Send request
 	_key = "CHILD:307:";

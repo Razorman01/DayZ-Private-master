@@ -1,10 +1,11 @@
 private["_characterID","_minutes","_newObject","_playerID","_key","_playerName","_playerID","_myGroup","_group","_victim", "_killer", "_weapon", "_message", "_distance","_loc_message","_victimName","_killerName","_killerPlayerID"];
 //[unit, weapon, muzzle, mode, ammo, magazine, projectile]
+
 _characterID = 	_this select 0;
 _minutes =		_this select 1;
 _newObject = 	_this select 2;
 _playerID = 	_this select 3;
-_playerName = 	_this select 4;
+_playerName = 	name _newObject;
 
 _victim removeAllEventHandlers "MPHit";
 
@@ -44,8 +45,9 @@ if (_killerName != "nil") then
 	_victim setVariable["AttackedFromDistance", "nil", true];
 };
 
-dayz_disco = dayz_disco - [_playerID];
+//dayz_disco = dayz_disco - [_playerID];
 _newObject setVariable["processedDeath",time];
+_newObject setVariable ["bodyName", _playerName, true];
 
 /*
 diag_log ("DW_DEBUG: (isnil _characterID): " + str(isnil "_characterID"));

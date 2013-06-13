@@ -1,4 +1,3 @@
-
 private ["_characterID","_playerObj","_playerID","_dummy","_worldspace","_state","_doLoop","_key","_primary","_medical","_stats","_humanity","_randomSpot","_position","_debug","_distance","_fractures","_score","_findSpot","_mkr","_j","_isIsland","_w","_clientID"];//diag_log ("SETUP: attempted with " + str(_this));
 
 //diag_log(format["%1 DEBUG %2", __FILE__, _this]);
@@ -10,6 +9,10 @@ if (isNull _playerObj) exitWith {
 	diag_log ("SETUP INIT FAILED: Exiting, player object null: " + str(_playerObj));
 };
 
+//Add MPHit event handler
+diag_log("Adding MPHit EH for " + str(_playerObj));
+_playerObj addMPEventHandler ["MPHit", {_this spawn fnc_plyrHit;}];
+
 if (_playerID == "") then {
 	_playerID = getPlayerUID _playerObj;
 };
@@ -17,10 +20,6 @@ if (_playerID == "") then {
 if (_playerID == "") exitWith {
 	diag_log ("SETUP INIT FAILED: Exiting, no player ID: " + str(_playerObj));
 };
-
-//Add MPHit event handler
-diag_log("Adding MPHit EH for " + str(_playerObj));
-_playerObj addMPEventHandler ["MPHit", {_this spawn fnc_plyrHit;}];
 
 private["_dummy"];
 _dummy = getPlayerUID _playerObj;

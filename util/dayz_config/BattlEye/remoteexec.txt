@@ -254,7 +254,7 @@
 5 dog_
 5 drn_
 5 eh_localcleanup
-5 fnc_ !="_this spawn fnc_plyrHit.sqf;" !="fnc_plyrHit.sqf;" !="fnc_carePkgs.sqf;" !="fnc_wrecks.sqf;" !="plyrHit"
+5 fnc_ !="fnc_carePkgs" !="fnc_wrecks" !"fnc_plyrHit" !"hit" !fnc_plyrHit !plyrHit !"plyrHit"
 5 fn_nicespot
 5 gear_ui_init
 5 horde_epeen_determine_humanity_fnc

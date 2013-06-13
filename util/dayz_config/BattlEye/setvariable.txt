@@ -112,7 +112,8 @@
 5 "["
 5 "|"
 5 "&"
-5 "="
+//set equal to 1 now to monitor for variables like temperature =
+1 "="
 5 ":"
 5 "!"
 5 "%"

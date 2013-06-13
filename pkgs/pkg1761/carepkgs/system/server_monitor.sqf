@@ -12,6 +12,7 @@ waitUntil{initialized}; //means all the functions are now defined
 
 diag_log "HIVE: Starting";
 
+/*
 if (_script != "") then
 {
   diag_log "MISSION: File Updated";
@@ -22,6 +23,7 @@ if (_script != "") then
     sleep 1;
     };
 };
+*/
 
 //Set the Time
 	//Send request
